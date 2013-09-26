@@ -1,0 +1,49 @@
+body {
+	font-family: "Helvetica", sans-serif;
+	margin: 0px;
+}
+
+h1 {
+	margin: 0px;
+	text-align: center;
+	color: #4F4C54;
+	border-bottom: 2px solid #525C55;
+	background-color: #ADA09E;
+	font-family: "Georgia";
+}
+
+ul { 
+	margin: 20px auto; 
+	padding: 3px; 
+	width: 100px;
+	border: 2px solid #ccc;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+
+li {
+	padding: 3px;
+	overflow: hidden;
+}
+
+.gone {
+	opacity: 0.1;
+}
+
+.almost-gone {
+	opacity: 0.3;
+}
+
+.kinda-gone {
+	opacity: 0.6;
+}
+
+.selector {
+	border: 3px solid red;
+	height: 20px;
+	width: 110px;
+	position: relative;
+	top: -148px;
+	margin: 0px auto;
+	background-color: rgba(0, 102, 51, .3)
+}
