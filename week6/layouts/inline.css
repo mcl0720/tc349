@@ -1,0 +1,16 @@
+.wrap {
+		margin: 0 3%;
+	}
+
+article {
+	width: 200px;
+	padding: 10px;
+	margin: 10px;
+	background: #f3f3f3;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer {
+	clear: both;
+}
