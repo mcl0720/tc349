@@ -1,0 +1,55 @@
+1) True or False. A Michigan LLC can have one or multiple member s/partners.
+	
+	True
+
+2) True or False. Once you have a business name, the next step is to open a bank account.
+
+	False
+
+3) True or False. You only have to file a Michigan LLC Annual Report if your company earned money during the fiscal year.
+
+	False
+
+4) Name one thing general liability insurance might cover.
+
+	Someone falling in your office.
+
+5) True or False. The City of Lansing levies an income tax.
+
+	True
+
+6) Calculate your hourly billing rate for a web design business if you aim to pay yourself $45,000/year with a profit margin of 25%.
+
+	Labor: $45,000 x 1.35 = $60,075
+		$60,075/1,152 = $52.73 ~ $53/hour
+
+	Overhead: $12,000/1,152 = $10.42 ~ $11/hour
+
+	Operating Cost: $64/hour
+
+	Profit: 25% = $16/hour
+
+	Final Hourly Rate: $80/hour
+
+7) True or False. Work for hire means that you get to remain the copyright holder after you've delivered your work to the client.
+
+	False
+
+8) Find one local networking event in Lansing and one web design conference (globally) that's happening in 2014.
+
+	Local networking event: BNI Synergy Business Partners meeting
+							Tuesday, Nov. 19 7:00 a.m. - 8:30 a.m.
+							Tuesday, Nov. 26 7:00 a.m. - 8:30 a.m.
+
+	Global web design conference: 	FUTURE OF WEB DESIGN
+									7 - 9 APRIL 2014, LONDON
+
+9) True or False. You can use your personal checking account for business as long as you are not a corporation.
+
+	False
+
+10) Name three ways you could become a thought leader in your industry.
+
+	1. Develop a successful business within the industry and aquire a deep set of knowledge within that industry.
+	2. Create and maintain a large network with other leaders within that industry.
+	3. Generate unique and innovative designs and implementations. Establish a way to share these ideas with others.
