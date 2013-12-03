@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Michael Meldrum</title>
+        <meta name="description" content="The homepage of Michael Meldrum">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <header id="home">
+            <div id="header-wrapper">
+                <h1>Michael Meldrum</h1>
+                <h2>CSE Web Developer, Lansing, MI</h2>
+            </div>
+        </header>
+
+        <nav>
+            <a id="home-link" href="#home" data-nav-to="#home" class="glyphicon glyphicon-home"></a>
+            <ul id="nav-ul">
+                <li><a href="#about" data-nav-to="#about">About</a></li>
+                <li><a href="#samples" data-nav-to="#samples">Samples</a></li>
+                <li><a href="#sharing" data-nav-to="#share">Shareables</a></li>
+            </ul>   
+        </nav>
+        <article>
+            <section id="about">
+                <h3>About Michael</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+            </section>
+            <section id="samples">
+                <h3>Samples</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+                <button class="details btn-green glyphicon glyphicon-chevron-right" data-detail-content="#samples-detail"></button>
+            </section>
+            <section id="share">
+                <h3>Shareables</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+                <button class="details btn-green glyphicon glyphicon-chevron-right" data-detail-content="#share-detail"></button>
+            </section>
+            <!-- <section id="contact">
+                <h3>Contact</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+            </section> -->
+        </article> 
+
+        <div id="samples-detail" class="detail-content" data-detail-section="#samples" hidden>
+            <section>
+                <h3>Samples</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+            </section>
+        </div>
+        <div id="share-detail" class="detail-content" data-detail-section="#share" hidden>
+            <section>
+                <h3>Shareables</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse hendrerit odio et arcu adipiscing sagittis. Nam egestas est at mi luctus dictum. Curabitur aliquet malesuada libero, sed convallis tellus hendrerit tincidunt. Phasellus in urna et tortor semper ultricies. Cras facilisis auctor est vitae viverra.</p>
+            </section>
+        </div>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/vendor/skrollr.min.js"></script>
+        <script src="js/vendor/skrollr.menu.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($(window).width() < 900) {
+                    $.each($('section'), function(index, element) {
+                        $(element).css("width", $(window).width() - 100);
+                    });
+                }
+
+                $(window).resize(function(){
+                    resizeSections();
+
+                    var sectionWrapper = $(".section-wrapper");
+                    if(sectionWrapper.length > 0) {
+                        var about = $("#about");
+                        // console.log(about.css("margin-left"));
+                        sectionWrapper.css("width", ($(window).width() * 2) + "px");
+                        sectionWrapper.children("section").css({margin: "0px " + about.offset().left});
+                        var contentSection = sectionWrapper.find(".detail-content section");
+                        contentSection.css({"margin-left": about.offset().left });
+                        var content = sectionWrapper.find(".detail-content").css({width: $(window).width() + "px"});
+                        $('html, body').scrollLeft(content.offset().left);
+                    }
+                });
+
+                $("nav a").click(function(e) {
+                    var sectionWrapper = $(".section-wrapper");
+                    var button = $(e.currentTarget);
+
+                    if(sectionWrapper.length > 0) {
+                        cleanUpDetail(button);
+                    } else {
+                        var body = $("body");
+                        var navPlace = button.attr("data-nav-to");
+
+                        $('html, body').animate({
+                            scrollTop: $(navPlace).offset().top - $("nav").outerHeight()
+                        }, 2000);
+                    }
+                    e.preventDefault();
+                });
+
+                $(window).on('scroll', function ( e ) {
+                    var nav = $("nav");
+                    var header = $("header");
+
+                    if ((header.offset().top + header.height() - nav.outerHeight()) < $(window).scrollTop()) {
+                        nav.addClass("fix-nav");
+                    } else {
+                        nav.removeClass("fix-nav");
+                    }
+
+                });
+
+                $(".details").click(function(e) {
+                    var checkWrapper = $(".section-wrapper");
+
+                    if(checkWrapper.length == 0) {
+                        // $("body").css("overflow", "scroll");
+                        resizeSections();
+
+                        var about = $("#about");
+
+                        var button = $(e.currentTarget);
+                        console.log(button.attr("data-detail-content"));
+
+                        var movingSection = $(button.attr("data-detail-content")).clone();
+                        movingSection.prop("hidden", false).css( {width: $(window).width() + "px"} );
+                        // console.log(about.css("margin-left"));
+                        movingSection.find("section").css("margin-left", about.offset().left);
+
+                        var section = $(movingSection.attr("data-detail-section"));
+                        section.css({margin: "0px " + about.offset().left + "px"});
+
+                        var sectionWrapper = $(document.createElement('div')).addClass("section-wrapper").attr("data-section-id", movingSection.attr("data-detail-section")).css("width", ($(window).width() * 2) + "px");
+                        section.wrap(sectionWrapper);
+
+                        $(".section-wrapper").append(movingSection);
+
+                        var scrolled = false;
+
+                        $('html, body').animate({
+                            scrollTop: section.offset().top - $("nav").outerHeight()
+                        }, 1000, function() {
+                            if (!scrolled) {
+                                $('html, body').animate({
+                                    scrollLeft: movingSection.offset().left
+                                }, 2000);
+                                scrolled = true;
+                            }
+                        });
+                    }
+                });
+            });
+
+            function cleanUpDetail(button) {
+                var detailContent = $("article .detail-content");
+                var section = $(detailContent.attr("data-detail-section"));
+                detailContent.addClass("hide-stuff");
+
+                detailContent.one('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function(e) {
+                    $('html, body').animate({
+                        scrollLeft: 0
+                    }, 1500, function() {
+                        if($(".section-wrapper").length > 0) {
+                            detailContent.remove();
+
+                            section.unwrap();
+                            section.css({margin: "0px auto"});
+
+                            // $("body").css("overflow-y", "auto");
+
+                            resizeSections();
+                            button.click();
+                        } 
+                    });
+                });
+            }
+
+            function resizeSections() {
+                if ($(window).width() < 900) {
+                    $.each($('section'), function(index, element) {
+                        $(element).css({width: $(window).width() - 100, margin: "0px auto"});
+                    });
+                } else {
+                    var sections = $('section');
+                    if (sections.eq(0).width() != 800){
+                        $.each(sections, function(index, element) {
+                            $(element).css({"width": 800, margin: "0px auto" });
+                        });
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
